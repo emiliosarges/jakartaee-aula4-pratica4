@@ -31,4 +31,8 @@ public class EjbCompra {
     public List<ItemCompra> getAll() {
         return lCompra;
     }
+
+    public void limparLista(){
+        lCompra.clear();
+    }
 }

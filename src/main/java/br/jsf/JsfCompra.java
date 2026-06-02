@@ -27,4 +27,8 @@ public class JsfCompra implements Serializable {
         return ejbCompra.getAll();
     }
 
+    public void getLimpa(){
+        ejbCompra.limparLista();
+    }
+
 }

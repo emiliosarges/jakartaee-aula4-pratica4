@@ -13,32 +13,47 @@
     <h:form>
 
         <h:dataTable value="#{jsfProduto.all}" var="prod">
+
             <h:column>
                 <h:outputText value="#{prod.codigo}" />
             </h:column>
+
             <h:column>
                 <h:outputText value="#{prod.descricao}" />
             </h:column>
+
             <h:column>
-                <h:commandButton value="add"
-                                 action="#{jsfCompra.add(prod)}"/>
+                <h:commandButton value="Adicionar"
+                                 action="#{jsfCompra.add(prod)}" />
             </h:column>
+
         </h:dataTable>
 
-    </h:form>
-    Itens adicionados:
-    <h:form>
+        <br/>
+
+        <h2>Itens adicionados:</h2>
+
         <h:dataTable value="#{jsfCompra.all}" var="item">
+
             <h:column>
                 <h:outputText value="#{item.produto.codigo}" />
             </h:column>
+
             <h:column>
                 <h:outputText value="#{item.produto.descricao}" />
             </h:column>
+
             <h:column>
                 <h:outputText value="#{item.quantidade}" />
             </h:column>
+
         </h:dataTable>
+
+        <br/>
+
+        <h:commandButton value="Limpar carrinho"
+                         action="#{jsfCompra.getLimpa}" />
+
     </h:form>
 
 </h:body>
