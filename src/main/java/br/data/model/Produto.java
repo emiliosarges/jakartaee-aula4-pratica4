@@ -1,8 +1,5 @@
 package br.data.model;
 
-import lombok.*;
-
-
 public class Produto {
     private int codigo;
     private String descricao;
